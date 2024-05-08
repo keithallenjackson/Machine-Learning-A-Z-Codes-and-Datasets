@@ -18,7 +18,7 @@
 	// "customizations": {},
 
 	// post-startup feature add
-	"postCreateCommand": "sudo apt update && sudo apt upgrade -y && sudo apt install -y r-base && pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org numpy matplotlib pandas ipykernel scikit-learn",
+	"postCreateCommand": "sudo apt update -o Acquire::https::Verify-Peer=false && sudo apt upgrade -y -o Acquire::https::Verify-Peer=false && sudo apt install -y -o Acquire::https::Verify-Peer=false r-base && pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org numpy matplotlib pandas ipykernel scikit-learn",
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
